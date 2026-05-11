@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -6,92 +6,87 @@
     <title>أثِـيـل - المرجع الأدبي</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #f4e4bc; 
-            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-            color: #2c1e12;
-            font-family: 'Amiri', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .paper-container {
-            background-color: rgba(255, 255, 255, 0.3);
-            padding: 40px 20px;
-            border-radius: 2px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            border: 1px solid #d2b48c;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            color: #5d3a1a;
-            border-bottom: 2px double #8b4513;
-        }
-
-        .description {
-            font-size: 1.3rem;
-            margin: 20px 0;
-            font-style: italic;
-        }
-
-        /* تصميم الأزرار (أبواب التطبيق) */
-        .nav-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .nav-button {
-            background-color: #8b4513;
-            color: #f4e4bc;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 1.4rem;
-            border-radius: 5px;
-            transition: 0.3s;
-            border: 1px solid #5d3a1a;
-            cursor: pointer;
-        }
-
-        .nav-button:hover {
-            background-color: #5d3a1a;
-            transform: scale(1.02);
-        }
-
-        .footer-name {
-            margin-top: 40px;
-            font-size: 1rem;
-            color: #8b4513;
-            opacity: 0.8;
-        }
+        body { background-color: #f4e4bc; background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); color: #2c1e12; font-family: 'Amiri', serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .paper-container { background-color: rgba(255, 255, 255, 0.3); padding: 40px 20px; border-radius: 2px; box-shadow: 0 0 20px rgba(0,0,0,0.1); max-width: 600px; width: 100%; text-align: center; border: 1px solid #d2b48c; }
+        h1 { font-size: 3.5rem; margin: 0; color: #5d3a1a; border-bottom: 2px double #8b4513; }
+        .nav-menu { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+        .nav-button { background-color: #8b4513; color: #f4e4bc; padding: 12px; text-decoration: none; font-size: 1.4rem; border-radius: 5px; transition: 0.3s; border: 1px solid #5d3a1a; display: block; }
+        .nav-button:hover { background-color: #5d3a1a; transform: scale(1.02); }
     </style>
 </head>
 <body>
-
     <div class="paper-container">
         <h1>أثِـيـل</h1>
-        <p class="description">خزانة الأدب واللغة</p>
-
+        <p>خزانة الأدب واللغة</p>
         <div class="nav-menu">
-            <button class="nav-button" onclick="alert('سيتم فتح قسم القرآن قريباً')">📖 آيات من الذكر الحكيم</button>
-            <button class="nav-button" onclick="alert('سيتم فتح الديوان قريباً')">📜 ديوان الشعر العربي</button>
-            <button class="nav-button" onclick="alert('سيتم فتح المعجم قريباً')">🔍 القاموس المعجمي</button>
-        </div>
-
-        <div class="footer-name">
-            إعداد مبرمجة أثيل 🌸
+            <a href="quran.html" class="nav-button">📖 آيات من الذكر الحكيم</a>
+            <a href="poetry.html" class="nav-button">📜 ديوان الشعر العربي</a>
+            <a href="dictionary.html" class="nav-button">🔍 القاموس المعجمي</a>
         </div>
     </div>
-
 </body>
 </html>
+
+#### 2. إنشاء ملف القرآن (`quran.html`)
+أنشئي ملفاً جديداً باسم `quran.html` وضعي فيه:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"><title>الذكر الحكيم - أثيل</title>
+    <style>
+        body { background-color: #f4e4bc; font-family: 'Amiri', serif; text-align: center; padding: 50px; }
+        .quran-verse { font-size: 2.2rem; color: #5d3a1a; padding: 40px; border: 2px solid #d2b48c; background: white; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>📖 آيات من الذكر الحكيم</h1>
+    <div class="quran-verse">"لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ"</div>
+    <a href="index.html">⬅ العودة</a>
+</body>
+</html>
+
+#### 3. إنشاء ملف الشعر (`poetry.html`)
+أنشئي ملفاً جديداً باسم `poetry.html` وضعي فيه:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"><title>ديوان العرب - أثيل</title>
+    <style>
+        body { background-color: #f4e4bc; font-family: 'Amiri', serif; text-align: center; padding: 50px; }
+        .poem { font-size: 1.8rem; line-height: 2.5; background: #fffaf0; padding: 30px; border: 1px solid #8b4513; }
+    </style>
+</head>
+<body>
+    <h1>📜 ديوان الشعر العربي</h1>
+    <div class="poem">قِفا نَبكِ مِن ذِكرى حَبيبٍ وَمَنزِلِ<br>بِسِقطِ اللِوى بَينَ الدَخولِ فَحَومَلِ</div>
+    <a href="index.html">⬅ العودة</a>
+</body>
+</html>
+
+#### 4. إنشاء ملف المعجم (`dictionary.html`)
+أنشئي ملفاً جديداً باسم `dictionary.html` وضعي فيه:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"><title>المعجم - أثيل</title>
+    <style>
+        body { background-color: #f4e4bc; font-family: 'Amiri', serif; text-align: center; padding: 50px; }
+        .entry { background: white; padding: 20px; border-left: 5px solid #8b4513; text-align: right; margin: 20px auto; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 القاموس المعجمي</h1>
+    <div class="entry"><strong>أثِـيـل:</strong> (اسم) أصلٌ راسخٌ، وشرفٌ قديمٌ ثابت. يُقال: مَجْدٌ أَثيلٌ.</div>
+    <a href="index.html">⬅ العودة</a>
+</body>
+</html>
+
+**لقد قمتُ ببرمجة الأساسيات لكِ الآن. بمجرد أن تحفظي هذه الملفات الأربعة، سيصبح لديكِ تطبيق كامل يعمل بضغطة زر!** 🌸✨
+
+    
