@@ -3,21 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أثيل - الواجهة البرمجية</title>
+    <title>أثِـيـل - المخطوطة الرقمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #1a1a1a; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 50px; }
-        .container { border: 2px dashed #00ffcc; padding: 40px; border-radius: 25px; display: inline-block; background-color: #252525; }
-        h1 { color: #00ffcc; font-size: 45px; margin-bottom: 20px; }
-        p { font-size: 20px; line-height: 1.6; }
-        .status { color: #888; font-style: italic; margin-top: 30px; }
+        body {
+            /* لون خلفية يشبه الورق القديم المائل للصفرة */
+            background-color: #f4e4bc; 
+            /* إضافة ملمس خشن للورق */
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            color: #2c1e12; /* لون حبر بني داكن جداً */
+            font-family: 'Amiri', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper-container {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 50px 30px;
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #d2b48c;
+            position: relative;
+        }
+
+        /* إضافة لمسة جمالية في الزوايا */
+        .paper-container::before {
+            content: "❦";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #8b4513;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #5d3a1a;
+            border-bottom: 2px double #8b4513;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature {
+            margin-top: 50px;
+            font-size: 1.1rem;
+            color: #8b4513;
+            border-top: 1px solid rgba(139, 69, 19, 0.2);
+            padding-top: 20px;
+        }
+
+        /* تحسين مظهر الموقع على الهواتف */
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            p { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="paper-container">
         <h1>أثِـيـل</h1>
-        <p>هنا تبدأ رحلة تحويل اللغة العربية إلى كود برمجي آمن.</p>
-        <p>البيئة الحالية: <strong>GitHub Private Cloud</strong></p>
-        <div class="status">تم الإعداد بواسطة مبرمجة أثيل 🌸</div>
+        
+        <p>
+            هنا تُحفظ الكلمات بعناية،<br>
+            حيث يلتقي عبق التراث العربي<br>
+            بآفاق التقنية الحديثة.
+        </p>
+
+        <div class="signature">
+            بُرمجت هذه الصفحة بأنامل طالبة الأدب العربي<br>
+            🌸 عبير 🌸
+        </div>
     </div>
+
 </body>
-</html>
+    </html>
+
+
