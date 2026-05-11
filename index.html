@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -8,110 +8,81 @@
     
     <style>
         :root {
-            --primary-color: #8b4513; /* بني خشبي للأصالة */
-            --bg-color: #fdfaf5;      /* لون ورق كريمي مريح */
-            --text-color: #2c3e50;    /* لون نص داكن احترافي */
-            --accent-color: #4a6741;  /* أخضر زيتوني خفيف للطبيعة */
+            --gold: #c5a059;       /* لون ذهبي خافت للزخرفة */
+            --royal-blue: #1a2a6c; /* أزرق ملكي عميق */
+            --paper: #f9f7f2;      /* لون الورق العتيق */
+            --ink: #2c3e50;        /* لون الحبر */
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Cairo', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Amiri', serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
             min-height: 100vh;
+            background-image: radial-gradient(#dcdcdc 0.5px, transparent 0.5px);
+            background-size: 20px 20px; /* خلفية منقطة خفيفة كالدفاتر */
         }
 
-        /* رأس الصفحة - الهيدر */
         header {
-            width: 100%;
-            background-color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 3px solid var(--primary-color);
+            width: 100%; padding: 40px 0; text-align: center;
+            background: white; border-bottom: 4px double var(--gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        h1 {
-            font-family: 'Amiri', serif;
-            margin: 0;
-            color: var(--primary-color);
-            font-size: 2.5rem;
+        h1 { 
+            margin: 0; color: var(--royal-blue); font-size: 3.5rem; 
+            font-weight: normal; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        .subtitle {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            letter-spacing: 2px;
+        .motto {
+            font-family: 'Cairo', sans-serif; font-size: 0.9rem;
+            color: var(--gold); text-transform: uppercase; letter-spacing: 3px;
+            margin-top: 5px; font-weight: bold;
         }
 
-        /* المحتوى الرئيسي */
-        main {
-            width: 90%;
-            max-width: 600px;
-            margin-top: 30px;
-            text-align: center;
+        main { width: 85%; max-width: 450px; margin-top: 50px; }
+
+        /* تصميم الأزرار كلوحات خط عربي */
+        .nav-menu {
+            display: flex; flex-direction: column; gap: 25px;
         }
 
-        .card {
+        .nav-button {
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-        }
-
-        .quote {
-            font-family: 'Amiri', serif;
-            font-size: 1.4rem;
-            line-height: 1.8;
-            color: var(--text-color);
-            font-style: italic;
-        }
-
-        /* أزرار التنقل */
-        .nav-links {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            background-color: white;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* تذييل الصفحة */
-        footer {
-            margin-top: auto;
+            border: 1px solid var(--gold);
+            border-radius: 0px; /* زوايا حادة لتبدو كإطارات اللوحات */
             padding: 20px;
-            font-size: 0.8rem;
-            color: #95a5a6;
+            text-decoration: none;
+            display: flex; align-items: center; justify-content: center;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 5px 5px 0px var(--gold); /* ظل صلب كلاسيكي */
         }
 
-        /* لمسة جمالية للحروف */
-        .embroidery-border {
-            height: 5px;
-            background: repeating-linear-gradient(45deg, var(--primary-color), var(--primary-color) 10px, var(--accent-color) 10px, var(--accent-color) 20px);
-            width: 100%;
-            margin-bottom: 20px;
+        .nav-button span {
+            font-size: 1.8rem; color: var(--royal-blue);
+        }
+
+        /* تأثير عند الضغط */
+        .nav-button:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0px 0px 0px var(--gold);
+        }
+
+        /* زخرفة جانبية بسيطة */
+        .nav-button::before, .nav-button::after {
+            content: "◆"; color: var(--gold); font-size: 0.8rem;
+            position: absolute;
+        }
+        .nav-button::before { right: 15px; }
+        .nav-button::after { left: 15px; }
+
+        footer {
+            margin-top: auto; padding: 30px; font-family: 'Cairo', sans-serif;
+            font-size: 0.8rem; color: #95a5a6; border-top: 1px solid #e0e0e0;
+            width: 100%; text-align: center;
         }
     </style>
 </head>
@@ -119,26 +90,31 @@
 
     <header>
         <h1>أثـيل</h1>
-        <div class="subtitle">أصالة الأدب وجمال الفن</div>
+        <div class="motto">موسوعة الأدب والجمال</div>
     </header>
 
-    <div class="embroidery-border"></div>
-
     <main>
-        <div class="card">
-            <p class="quote">"لعلّ الذي حدث بعد ذلك أمراً.. يزرع في الروحِ صبراً، وفي القلبِ أملاً."</p>
-        </div>
+        <nav class="nav-menu">
+            <a href="quran.html" class="nav-button">
+                <span>القرآن الكريم</span>
+            </a>
+            
+            <a href="poetry.html" class="nav-button">
+                <span>عيون الشعر</span>
+            </a>
+            
+            <a href="dictionary.html" class="nav-button">
+                <span>قاموس اللغة</span>
+            </a>
 
-        <div class="nav-links">
-            <a href="#" class="btn">مذكراتي الأدبية</a>
-            <a href="#" class="btn">معرض التطريز</a>
-            <a href="#" class="btn">قواعد اللغة</a>
-            <a href="#" class="btn">تواصل معي</a>
-        </div>
+            <a href="thoughts.html" class="nav-button">
+                <span>رسائل وخواطر</span>
+            </a>
+        </nav>
     </main>
 
     <footer>
-        تم التطوير بكل حب | عبير - 2026
+        بأقلام: عبير | 2026 م
     </footer>
 
 </body>
