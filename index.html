@@ -1,88 +1,98 @@
-            <!DOCTYPE html>
+                    <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أثـيل - ATHEEL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold: #c5a059;       /* لون ذهبي خافت للزخرفة */
-            --royal-blue: #1a2a6c; /* أزرق ملكي عميق */
-            --paper: #f9f7f2;      /* لون الورق العتيق */
-            --ink: #2c3e50;        /* لون الحبر */
+            --primary: #5d4037;    /* بني دافئ هادئ */
+            --secondary: #a1887f;  /* لون ترابي فاتح */
+            --bg: #ffffff;         /* خلفية بيضاء صافية */
+            --accent: #d7ccc8;    /* لون التظليل الناعم */
         }
 
         body {
-            background-color: var(--paper);
-            color: var(--ink);
-            font-family: 'Amiri', serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            font-family: 'Tajawal', sans-serif;
             margin: 0; padding: 0;
             display: flex; flex-direction: column; align-items: center;
             min-height: 100vh;
-            background-image: radial-gradient(#dcdcdc 0.5px, transparent 0.5px);
-            background-size: 20px 20px; /* خلفية منقطة خفيفة كالدفاتر */
         }
 
+        /* رأس الصفحة بتصميم ناعم */
         header {
-            width: 100%; padding: 40px 0; text-align: center;
-            background: white; border-bottom: 4px double var(--gold);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 100%;
+            padding: 50px 0 30px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #f9f5f3, #ffffff);
         }
 
         h1 { 
-            margin: 0; color: var(--royal-blue); font-size: 3.5rem; 
-            font-weight: normal; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-family: 'Amiri', serif;
+            margin: 0;
+            font-size: 3.5rem;
+            color: var(--primary);
+            letter-spacing: -1px;
         }
 
-        .motto {
-            font-family: 'Cairo', sans-serif; font-size: 0.9rem;
-            color: var(--gold); text-transform: uppercase; letter-spacing: 3px;
-            margin-top: 5px; font-weight: bold;
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 15px auto;
+            border-radius: 2px;
         }
 
-        main { width: 85%; max-width: 450px; margin-top: 50px; }
-
-        /* تصميم الأزرار كلوحات خط عربي */
-        .nav-menu {
-            display: flex; flex-direction: column; gap: 25px;
+        main {
+            width: 85%;
+            max-width: 400px;
+            margin-top: 20px;
         }
 
-        .nav-button {
-            background: white;
-            border: 1px solid var(--gold);
-            border-radius: 0px; /* زوايا حادة لتبدو كإطارات اللوحات */
-            padding: 20px;
+        /* قائمة الأزرار بتصميم عصري (Soft UI) */
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-item {
+            background-color: #ffffff;
+            border: 1px solid #f0e6e3;
+            border-radius: 20px; /* حواف مستديرة ناعمة */
+            padding: 22px;
             text-decoration: none;
-            display: flex; align-items: center; justify-content: center;
-            position: relative;
-            transition: all 0.4s ease;
-            box-shadow: 5px 5px 0px var(--gold); /* ظل صلب كلاسيكي */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.05); /* ظل خفيف جداً */
+            transition: all 0.3s ease;
         }
 
-        .nav-button span {
-            font-size: 1.8rem; color: var(--royal-blue);
+        .nav-item span {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        /* تأثير عند الضغط */
-        .nav-button:active {
-            transform: translate(3px, 3px);
-            box-shadow: 0px 0px 0px var(--gold);
+        /* تأثير الحركة عند الضغط */
+        .nav-item:active {
+            transform: scale(0.96);
+            background-color: #fdfaf9;
+            border-color: var(--secondary);
         }
-
-        /* زخرفة جانبية بسيطة */
-        .nav-button::before, .nav-button::after {
-            content: "◆"; color: var(--gold); font-size: 0.8rem;
-            position: absolute;
-        }
-        .nav-button::before { right: 15px; }
-        .nav-button::after { left: 15px; }
 
         footer {
-            margin-top: auto; padding: 30px; font-family: 'Cairo', sans-serif;
-            font-size: 0.8rem; color: #95a5a6; border-top: 1px solid #e0e0e0;
-            width: 100%; text-align: center;
+            margin-top: auto;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #bcaaa4;
+            text-align: center;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -90,31 +100,32 @@
 
     <header>
         <h1>أثـيل</h1>
-        <div class="motto">موسوعة الأدب والجمال</div>
+        <div class="divider"></div>
+        <p style="font-size: 0.9rem; color: #8d6e63;">طالبة الأدب العربي والمدرسة العليا</p>
     </header>
 
     <main>
-        <nav class="nav-menu">
-            <a href="quran.html" class="nav-button">
+        <nav class="nav-list">
+            <a href="quran.html" class="nav-item">
                 <span>القرآن الكريم</span>
             </a>
             
-            <a href="poetry.html" class="nav-button">
-                <span>عيون الشعر</span>
+            <a href="poetry.html" class="nav-item">
+                <span>عيون الشّعر</span>
             </a>
             
-            <a href="dictionary.html" class="nav-button">
+            <a href="dictionary.html" class="nav-item">
                 <span>قاموس اللغة</span>
             </a>
 
-            <a href="thoughts.html" class="nav-button">
+            <a href="thoughts.html" class="nav-item">
                 <span>رسائل وخواطر</span>
             </a>
         </nav>
     </main>
 
     <footer>
-        بأقلام: عبير | 2026 م
+        عَبِير • ٢٠٢٦
     </footer>
 
 </body>
