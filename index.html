@@ -4,104 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أثـيل - ATHEEL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #5d4037;    /* بني دافئ هادئ */
-            --secondary: #a1887f;  /* لون ترابي فاتح */
-            --bg: #ffffff;         /* خلفية بيضاء صافية */
-            --accent: #d7ccc8;    /* لون التظليل الناعم */
+            --ink: #3e2723;       /* لون الحبر الداكن */
+            --paper: #fdfaf5;    /* لون الورق القديم */
+            --gold: #b08e4f;     /* لون ريشة القلم */
+            --decoration: #d7ccc8;
         }
 
         body {
-            background-color: var(--bg);
-            color: var(--primary);
-            font-family: 'Tajawal', sans-serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Amiri', serif;
             margin: 0; padding: 0;
             display: flex; flex-direction: column; align-items: center;
             min-height: 100vh;
         }
 
-        /* رأس الصفحة بتصميم ناعم */
+        /* زينة علوية: ريشة وقلم */
         header {
             width: 100%;
-            padding: 50px 0 30px 0;
+            padding: 40px 0 20px 0;
             text-align: center;
-            background: linear-gradient(to bottom, #f9f5f3, #ffffff);
+            position: relative;
+        }
+
+        .pen-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
         }
 
         h1 { 
-            font-family: 'Amiri', serif;
+            font-family: 'Aref Ruqaa', serif; /* خط الرقعة للعنوان */
             margin: 0;
-            font-size: 3.5rem;
-            color: var(--primary);
-            letter-spacing: -1px;
+            font-size: 4rem;
+            color: var(--ink);
         }
 
-        .divider {
-            width: 50px;
-            height: 3px;
-            background-color: var(--secondary);
-            margin: 15px auto;
-            border-radius: 2px;
+        /* شريط زخرفي تحت العنوان */
+        .decoration-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
         }
+
+        .line {
+            width: 80px;
+            height: 1px;
+            background-color: var(--gold);
+        }
+
+        .dot { color: var(--gold); font-size: 1.2rem; }
 
         main {
             width: 85%;
             max-width: 400px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
-        /* قائمة الأزرار بتصميم عصري (Soft UI) */
+        /* الأزرار بتصميم "محبرة" أو "لوحة مخطوطة" */
         .nav-list {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
         }
 
         .nav-item {
-            background-color: #ffffff;
-            border: 1px solid #f0e6e3;
-            border-radius: 20px; /* حواف مستديرة ناعمة */
-            padding: 22px;
+            background-color: #fff;
+            border: 1px solid var(--decoration);
+            border-right: 6px solid var(--gold); /* تزيين جانبي يشبه حافة الكتاب */
+            border-radius: 4px;
+            padding: 18px;
             text-decoration: none;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.05); /* ظل خفيف جداً */
-            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.03);
+            transition: 0.3s;
         }
 
         .nav-item span {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-size: 1.5rem;
+            color: var(--ink);
+            font-weight: bold;
         }
 
-        /* تأثير الحركة عند الضغط */
+        /* أيقونة قلم صغيرة بجانب كل خيار */
+        .nav-item::after {
+            content: '✎';
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
         .nav-item:active {
-            transform: scale(0.96);
-            background-color: #fdfaf9;
-            border-color: var(--secondary);
+            transform: translateY(2px);
+            background-color: #f9f9f9;
         }
 
         footer {
             margin-top: auto;
             padding: 40px;
-            font-size: 0.8rem;
-            color: #bcaaa4;
+            font-size: 0.9rem;
+            color: var(--secondary);
             text-align: center;
-            letter-spacing: 1px;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
     <header>
+        <span class="pen-icon">✒️</span>
         <h1>أثـيل</h1>
-        <div class="divider"></div>
-        <p style="font-size: 0.9rem; color: #8d6e63;">طالبة الأدب العربي والمدرسة العليا</p>
+        <div class="decoration-line">
+            <div class="line"></div>
+            <span class="dot">❦</span>
+            <div class="line"></div>
+        </div>
     </header>
 
     <main>
@@ -125,7 +149,7 @@
     </main>
 
     <footer>
-        عَبِير • ٢٠٢٦
+        خُطّت بيمين عَبِير • ٢٠٢٦
     </footer>
 
 </body>
